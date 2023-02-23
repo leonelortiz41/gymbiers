@@ -1,0 +1,236 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    text-shadow: 2px 5px 5px #a8ea99;
+    display: inline;
+    vertical-align: top;
+    text-align: center;
+    margin: 2px;
+    margin-right: 10px;
+    font-size: 80px;
+}
+
+.logoGym {
+    display: inline;
+    height: 110px;
+}
+
+.mainMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    justify-content: center;
+    background-color: #141516;
+    padding: 10px;
+    width: 55%;
+}
+
+.mainMenu h1 {
+    color: #a8ea99;
+}
+
+.option,
+button,
+input {
+    cursor: pointer;
+}
+
+.option {
+    background-color: #a8ea99;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 100%;
+    padding: 6px;
+    text-align: center;
+    margin: 2px;
+    justify-content: center;
+}
+
+.option:hover {
+    background-color: #eafada;
+}
+
+.ir {
+    margin: 10px;
+    padding: 10px;
+    width: 91%;
+    text-decoration: none;
+    font-size: 35px;
+    display: block;
+    color: #000;
+}
+
+.modal {
+    background-color: rgb(0, 0, 0, .65);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal_dialog {
+    background-color: #dfe;
+    padding: 13px;
+    border-radius: 3px;
+    width: 300px;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.modal-open {
+    display: grid;
+}
+
+.modal-header {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+}
+
+.modal-header h1 {
+    display: inline-block;
+    font-size: 30px;
+    color: #000;
+    width: 80%;
+    text-align: left;
+}
+
+.modal-header .close {
+    display: inline;
+    background: none;
+    border: none;
+    float: right;
+    width: 15%;
+    color: #fa0232;
+    font-size: 38px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    vertical-align: top;
+}
+
+.modal-header .close:hover {
+    color: #951930;
+}
+
+.modal-header .close:active {
+    color: #f61818;
+}
+
+.modal-body {
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    justify-content: center;
+    height: 280px;
+    overflow-y: auto;
+}
+
+.modal-body input,
+.modal_body button {
+    display: block;
+    font-size: 17px;
+    align-items: center;
+    margin: auto;
+    margin-top: 7px;
+}
+
+.send {
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    color: #fff;
+    background: rgb(12, 100, 42);
+}
+
+.send:hover {
+    background: #697;
+}
+
+.send:active {
+    background: rgb(163, 242, 189);
+    color: #000;
+}
+
+.gender {
+    display: flex;
+    margin: auto;
+    position: relative;
+    justify-content: center;
+    text-align: left;
+}
+
+.gender input+i {
+    background: #f0f0f0;
+    border: #000 solid 1.5px;
+}
+
+.gender input[type=radio]+i {
+    height: 18px;
+    width: 18px;
+    border-radius: 100%;
+}
+
+.gender input[type=radio]+i:before {
+    content: '';
+    display: block;
+    height: 18px;
+    width: 18px;
+    border-radius: 100%;
+    background: #2AC176;
+    transition: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    transform: scale(0);
+}
+
+.gender input[type=radio]:checked+i:before {
+    transform: scale(1);
+}
+.gender:hover input[type=radio]:not(:checked) + i{
+	background: #B1E8CD;
+}
+.gender input {
+    visibility: hidden;
+    margin: 2px;
+    text-align: left;
+    width: 20px;
+}
+
+.rutine {
+    display: block;
+    margin: auto;
+    margin-top: 3px;
+    justify-content: center;
+    align-items: center;
+    height: 170px;
+    width: 90%;
+    font-size: 15px;
+    padding: 5px;
+}
+select{
+    display: block;
+    margin: auto;
+    padding: 3px;
+    width: 70%;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+}
