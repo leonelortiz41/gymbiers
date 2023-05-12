@@ -1,11 +1,8 @@
 import { receptionist, coach, member, admin } from "../users"
+import {useNavigate} from 'react-router-dom'
 
 export const back = () => {
-    let a = document.createElement("a");
-    a.href = "index.html"
-    a.click();
-    a.remove();
-    localStorage.clear();
+    window.location.href="/"
 }
 export const initSession = (user, password, section) => {
     let found = false;

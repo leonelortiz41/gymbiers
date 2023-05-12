@@ -1,4 +1,4 @@
-import react, { useState } from 'react'
+import react, { useEffect, useState } from 'react'
 import { Modal, ModalRegRec, ModalRegCoach, ModalRegMember, ModalListMember, ModalAssignRut, ModalListCoach, ModalRegPay } from './Modals'
 import { useModal } from '..//hooks/useModal'
 import { back, registerReceptionist } from '../functions/functions'
@@ -6,11 +6,20 @@ import logoGym from '../assets/gym.svg'
 import { initSession } from '../functions/functions'
 import { FiSend } from "@react-icons/all-files/fi/FiSend";
 import "./styles.css"
+import { useNavigate } from 'react-router-dom'
 export function Header() {
+  useEffect(() => {
+    if (window.location.pathname === "/") {
+      localStorage.removeItem("sessionAdmin");
+    }
+  }, []);
+
+  let navigate=useNavigate();
   return (
-    <div className='header'>
-      <h1>GYMBIERS</h1>
+    <div className='header' onClick={()=>navigate("/")}>
+      <h1>DROMO GYM</h1>
       <img src={logoGym} className="logoGym" />
+
     </div>
   )
 }
@@ -29,7 +38,7 @@ export function Option({ opc, func }) {
   )
 }
 
-export function LogIn({section}) {
+export function LogIn({ section }) {
   const [isOpenModal, openModal, closeModal] = useModal();
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
@@ -37,7 +46,7 @@ export function LogIn({section}) {
     <div>
       <Option opc="Iniciar sesion" func={openModal} />
       <Modal tittle="Login" isOpen={isOpenModal} closeModal={closeModal}>
-        <form onSubmit={(e) => { e.preventDefault(); initSession(user, password,section) }}>
+        <form onSubmit={(e) => { e.preventDefault(); initSession(user, password, section) }}>
           <input type="text" placeholder='user' onChange={(e) => setUser(e.target.value)} />
           <input type="password" placeholder='password' onChange={(e) => setPassword(e.target.value)} />
           <input type="submit" className="send" value="Log in" />

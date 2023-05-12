@@ -1,5 +1,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(  to right, #2AC176 , #fff, #000);
+    user-select: none ;
 }
 
 .header {
@@ -7,10 +9,10 @@ body {
     margin: auto;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .header h1 {
-    text-shadow: 2px 5px 5px #a8ea99;
     display: inline;
     vertical-align: top;
     text-align: center;
@@ -31,13 +33,14 @@ body {
     margin: auto;
     margin-top: 20px;
     justify-content: center;
-    background-color: #141516;
+    border-radius: 12px;
+    background-color: #000000a1;
     padding: 10px;
     width: 55%;
 }
 
 .mainMenu h1 {
-    color: #a8ea99;
+    color: #88faaa;
 }
 
 .option,
@@ -47,7 +50,7 @@ input {
 }
 
 .option {
-    background-color: #a8ea99;
+    background-color: #88faaa;
     border: none;
     border-radius: 5px;
     font-size: 20px;
